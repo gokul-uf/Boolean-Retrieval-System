@@ -21,7 +21,17 @@ def get_indexer(dir_name,flag= False):
 	else:
 		print "Index file not found!, no new index file created. Exiting now!"
 		exit(1)
-	
+
+def get_terms(search_query):
+'''
+	Note on query format
+	--------------------
+	* Looking for a query format using the !, &&, || operators for NOT AND and OR operations
+	* Precedence Order: NOT > AND > OR
+	* Example query: foo && bar || test && !best
+'''
+	sear
+
 def get_indices(index, terms):
 	
 	indices = {}
@@ -39,6 +49,7 @@ def init(search_query, search_dir,flag):
 	indices = get_indices(index,terms)
 #TODO: ok, now that we have the indices corresponding to each of the terms, how we gonna do the boolean operations on em?
 
+	
 if __name__ ='__main__':
 	try:
 		search_query = sys.argv[1]
